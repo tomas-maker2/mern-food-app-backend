@@ -1,8 +1,9 @@
 import { Request, Response } from "express";
 import Stripe from "stripe";
-import Restaurant, { MenuItemType } from "../models/restaurant";
-import Order from "../models/order";
+import Restaurant, { MenuItemType } from "../dto/models/restaurant";
+import Order from "../dto/models/order";
 import { error } from "console";
+
 
 const STRIPE = new Stripe(process.env.STRIPE_API_KEY as string);
 const FRONTEND_URL = process.env.FRONTEND_URL as string;
